@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  font-family: 'Segoe UI', sans-serif;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.face-container {
+  display: flex;
+  gap: 32px; /* Tăng khoảng cách */
+  width: 100%;
+  max-width: 1000px; /* Tăng kích thước container */
+  height: 600px; /* Thêm chiều cao cho container */
+}
+
+.face-left,
+.face-right {
+  flex: 1;
+  background: #1e1e1e;
+  border-radius: 16px; /* Tăng bo góc */
+  padding: 24px; /* Tăng padding */
+  display: flex; /* Thêm flexbox */
+  flex-direction: column; /* Sắp xếp các phần tử dọc */
+  justify-content: center; /* Căn giữa dọc */
+}
+
+.face-left video {
+  width: 100%;
+  border-radius: 12px; /* Tăng bo góc video */
+  background: #000;
+  height: 100%; /* Video chiếm toàn bộ chiều cao */
+  object-fit: cover; /* Đảm bảo video lấp đầy khung */
+}
+
+.face-right h2 {
+  margin-top: 0;
+  font-size: 24px; /* Tăng kích thước tiêu đề */
+  margin-bottom: 20px; /* Tăng khoảng cách */
+}
+
+.face-right p {
+  margin: 12px 0; /* Tăng khoảng cách */
+  font-size: 18px; /* Tăng kích thước chữ */
+}
+
+.buttons {
+  margin-top: 24px; /* Tăng khoảng cách */
+  display: flex;
+  gap: 16px; /* Tăng khoảng cách */
+  justify-content: center; /* Căn giữa các nút */
+}
+
+.buttons button {
+  flex: 1;
+  padding: 14px 24px; /* Tăng padding nút */
+  border: none;
+  border-radius: 8px; /* Tăng bo góc nút */
+  background: #008000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px; /* Tăng kích thước chữ nút */
+  font-weight: bold; /* Chữ đậm */
+  transition: background-color 0.2s ease-in-out; /* Hiệu ứng hover mượt mà */
+}
+
+.buttons button:hover {
+  background: #02ed02;
+}
+
+/* Responsive Design (Tùy chọn) */
+@media (max-width: 768px) {
+  .face-container {
+    flex-direction: column; /* Xếp dọc trên màn hình nhỏ */
+    height: auto; /* Chiều cao tự động */
+  }
+
+  .face-left,
+  .face-right {
+    padding: 16px;
+  }
+}

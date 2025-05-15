@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quét Khuôn Mặt</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="face-container">
+    <div class="face-left">
+      <video id="video" autoplay playsinline></video>
+    </div>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <div class="face-right">
+      <h2>Thông tin đã quét</h2>
+      <p><strong>Tuổi:</strong> <span id="age">-</span></p>
+      <p><strong>Giới tính:</strong> <span id="gender">-</span></p>
+      <p><strong>Sắc tộc:</strong> <span id="race">-</span></p>
+      <div class="buttons">
+        <button id="scanBtn">Quét Ảnh</button>
+        <button id="confirmBtn">Xác Nhận</button>
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/scan.js"></script>
+</body>
+</html>
